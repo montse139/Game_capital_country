@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Guesses list</title>
+    </head>
+
+    <body>
+            <h1>List of all guesses</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for guess in guesses %}
+                    <tr>
+                        <td><a href="/guess/{{ guess.key.id() }}">{{ guess.key.id() }}</a></td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </body>
+</html>
